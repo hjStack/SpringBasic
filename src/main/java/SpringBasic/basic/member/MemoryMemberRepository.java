@@ -3,9 +3,10 @@ package SpringBasic.basic.member;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MemoryMemberRepository implements memberRepository{
+public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>();
+
     @Override
     public void save(Member member) {
         store.put(member.getId(),member);  //put으로 키의 값을 저장  //객체 추가

@@ -2,7 +2,11 @@ package SpringBasic.basic.member;
 
 public class MemberServiceImpl implements MemberService{
 
-    private static memberRepository memberRepository = new MemoryMemberRepository();
+    private static MemberRepository memberRepository;
+
+    public MemberServiceImpl(MemberRepository memberRepository) {
+        this.memberRepository=memberRepository;
+    }
 
     @Override
     public void join(Member member) {
@@ -13,6 +17,5 @@ public class MemberServiceImpl implements MemberService{
     public Member findByMember(Long MemberId) {
         return memberRepository.findById(MemberId);
     }
-
 
 }

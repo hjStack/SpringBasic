@@ -1,6 +1,6 @@
 package SpringBasic.basic.member;
 
-public interface memberRepository {
+public interface MemberRepository {
 
     void save(Member member);
     Member findById(Long memberId);
